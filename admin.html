@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Tienda Geek</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <h1>Agregar Nuevo Producto</h1>
+  <form id="admin-form">
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="number" id="precio" placeholder="Precio" required>
+    <input type="text" id="imagen" placeholder="URL de la Imagen" required>    
+    <button type="submit">Agregar Producto</button>
+    <h5><a href="index.html">Volver</a></h5>
+  </form>
+
+  <h1>Lista de Productos</h1>
+<div id="productos-lista"></div>
+
+
+  <script src="./js/admin.js"></script>
+</body>
+</html>
