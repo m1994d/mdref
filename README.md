@@ -17,4 +17,4 @@ Tienda Geek es una plataforma de comercio electrónico dedicada a la venta de pr
 ## Instalación
 1. Clona el repositorio:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/m1994d/mdref.git
