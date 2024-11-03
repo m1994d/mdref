@@ -49,3 +49,12 @@ mostrarProductos(productos);
 function formatearPrecio(precio) {
     return precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'").replace(".", ",");
 }
+
+document.getElementById('filtro-categoria').addEventListener('change', (e) => {
+  const categoriaSeleccionada = e.target.value;
+  const productosFiltrados = categoriaSeleccionada === "Todos" 
+      ? productos 
+      : productos.filter(prod => prod.categoria === categoriaSeleccionada);
+  mostrarProductos(productosFiltrados);
+});
+

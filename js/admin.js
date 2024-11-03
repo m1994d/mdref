@@ -9,7 +9,8 @@ document.getElementById('admin-form').addEventListener('submit', (e) => {
         nombre: document.getElementById('nombre').value,
         precio: parseFloat(document.getElementById('precio').value),
         imagen: document.getElementById('imagen').value,
-        detalles: document.getElementById('detalles').value
+        detalles: document.getElementById('detalles').value,
+        categoria: document.getElementById('categoria').value
     };    
 
     // Obtener productos existentes
