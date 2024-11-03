@@ -36,16 +36,6 @@ main {
     justify-content: space-between; /* Espacia el contenido */
 }
 
-.producto h3 {
-    max-width: 200px; /* Cambia este valor según tu diseño */
-    margin: 0 auto; /* Centrar el título */
-    white-space: nowrap; /* No permitir que el texto se divida en varias líneas */
-    overflow: hidden; /* Ocultar el texto que se desborda */
-    text-overflow: ellipsis; /* Mostrar "..." si el texto se desborda */
-    text-align: center; /* Centrar el texto */
-}
-
-
 
 .producto:hover {
     transform: scale(1.05);

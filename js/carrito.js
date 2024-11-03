@@ -16,10 +16,10 @@ function mostrarCarrito() {
             <img src="${item.imagen}" alt="${item.nombre}">
             <h3>${item.nombre}</h3>
             <p>Precio: $${formatearPrecio(item.precio)}</p>
-            <button class="eliminar" data-index="${index}"><i class="fas fa-trash"></i>Eliminar</button> <!-- Botón de eliminar -->
+            <button class="eliminar" data-index="${index}"><i class="fas fa-trash"></i> Eliminar</button> <!-- Botón de eliminar -->
         `;
         contenedor.appendChild(productoDiv);
-        total += item.precio; // Asegúrate de que 'precio' sea un número
+        total += item.precio; // Sumar el precio al total
     });
 
     // Mostrar total
@@ -35,25 +35,12 @@ function mostrarCarrito() {
     });
 }
 
-
-function agregarAlCarrito(event) {
-    const nombre = event.target.getAttribute('data-nombre');
-    const precio = parseFloat(event.target.getAttribute('data-precio'));
-    const imagen = event.target.getAttribute('data-imagen');
-
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    carrito.push({ nombre, precio, imagen });
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-
-    alert('Producto agregado al carrito!');
-}
-
 function eliminarProducto(event) {
-    const index = event.target.closest('.eliminar').getAttribute('data-index'); // Asegura que se obtenga el índice correcto
+    const index = event.target.getAttribute('data-index'); // Obtener el índice correcto
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    carrito.splice(index, 1); // Eliminar producto
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    mostrarCarrito(); // Volver a mostrar el carrito
+    carrito.splice(index, 1); // Eliminar producto del carrito
+    localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualizar `localStorage`
+    mostrarCarrito(); // Refrescar la vista del carrito
 }
 
 // Cargar el carrito al iniciar la página
