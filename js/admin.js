@@ -13,7 +13,7 @@ document.getElementById('admin-form').addEventListener('submit', async (e) => {
         detalles: document.getElementById('detalles').value
     }; 
 
-    await fetch('http://127.0.0.1:5501', {
+    await fetch('https://m1994d.github.io/mdref/index.html', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
