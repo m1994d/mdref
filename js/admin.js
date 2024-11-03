@@ -8,8 +8,9 @@ document.getElementById('admin-form').addEventListener('submit', (e) => {
     const nuevoProducto = {
         nombre: document.getElementById('nombre').value,
         precio: parseFloat(document.getElementById('precio').value),
-        imagen: document.getElementById('imagen').value
-    };
+        imagen: document.getElementById('imagen').value,
+        detalles: document.getElementById('detalles').value
+    };    
 
     // Obtener productos existentes
     const productos = JSON.parse(localStorage.getItem('productos')) || [];

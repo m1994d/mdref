@@ -13,11 +13,13 @@ function mostrarCarrito() {
         const productoDiv = document.createElement('div');
         productoDiv.classList.add('producto');
         productoDiv.innerHTML = `
-            <img src="${item.imagen}" alt="${item.nombre}">
-            <h3>${item.nombre}</h3>
-            <p>Precio: $${formatearPrecio(item.precio)}</p>
-            <button class="eliminar" data-index="${index}"><i class="fas fa-trash"></i> Eliminar</button> <!-- Botón de eliminar -->
-        `;
+    <img src="${item.imagen}" alt="${item.nombre}">
+    <h3>${item.nombre}</h3>
+    <p>Precio: $${formatearPrecio(item.precio)}</p>
+    <p>${item.detalles}</p>
+    <button class="eliminar" data-index="${index}"><i class="fas fa-trash"></i> Eliminar</button>
+`;
+
         contenedor.appendChild(productoDiv);
         total += item.precio; // Sumar el precio al total
     });

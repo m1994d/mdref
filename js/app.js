@@ -8,11 +8,13 @@ function mostrarProductos(filtrados) {
         const item = document.createElement('div');
         item.classList.add('producto');
         item.innerHTML = `
-            <img src="${producto.imagen}" alt="${producto.nombre}">
-            <h3>${producto.nombre}</h3>
-            <p>Precio: $${formatearPrecio(producto.precio)}</p>
-            <button class="agregar-carrito" data-nombre="${producto.nombre}" data-precio="${producto.precio}" data-imagen="${producto.imagen}">Agregar al carrito</button>
-        `;
+    <img src="${producto.imagen}" alt="${producto.nombre}">
+    <h3>${producto.nombre}</h3>
+    <p>Precio: $${formatearPrecio(producto.precio)}</p>
+    <p>${producto.detalles}</p>
+    <button class="agregar-carrito" data-nombre="${producto.nombre}" data-precio="${producto.precio}" data-imagen="${producto.imagen}">Agregar al carrito</button>
+`;
+
 
         contenedor.appendChild(item);
     });
