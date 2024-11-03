@@ -2,16 +2,27 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarProductos();
 });
 
-document.getElementById('admin-form').addEventListener('submit', (e) => {
+document.getElementById('admin-form').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const nuevoProducto = {
         nombre: document.getElementById('nombre').value,
         precio: parseFloat(document.getElementById('precio').value),
         imagen: document.getElementById('imagen').value,
-        detalles: document.getElementById('detalles').value,
-        categoria: document.getElementById('categoria').value
-    };    
+        categoria: document.getElementById('categoria').value,
+        detalles: document.getElementById('detalles').value
+    }; 
+
+    await fetch('http://127.0.0.1:5501', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(nuevoProducto)
+    });
+
+    alert('Producto agregado!');
+    mostrarProductos(); 
 
     // Obtener productos existentes
     const productos = JSON.parse(localStorage.getItem('productos')) || [];

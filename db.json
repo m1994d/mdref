@@ -1,0 +1,14 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Producto de ejemplo",
+        "precio": 1000,
+        "imagen": "url-de-la-imagen",
+        "categoria": "Electrónica",
+        "detalles": "Descripción breve del producto."
+      }
+      
+    ]
+  }
+  
