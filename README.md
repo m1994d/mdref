@@ -22,13 +22,6 @@
 - **CSS**: Diseño responsivo y estilo futurista para la interfaz de usuario.
 - **JavaScript**: Lógica para manipular el carrito, la administración de productos, y el manejo de almacenamiento en `localStorage` o `db.json`.
 
-## Tecnologías Utilizadas
-
-    HTML5: Estructura de las páginas.
-    CSS3: Estilo visual.
-    JavaScript: Lógica de la aplicación.
-    JSON Server: Simulación de la base de datos.
-
 ### Configuración de `db.json` y JSON Server
 Para simular una base de datos, se implementó `JSON Server`, que utiliza `db.json` como archivo de almacenamiento.
 
@@ -46,9 +39,22 @@ Para simular una base de datos, se implementó `JSON Server`, que utiliza `db.js
 
 ## Uso
 
-Clona este repositorio:
+1.Clona este repositorio:
 
-     ```bash
-     
     git clone <URL_DEL_REPOSITORIO>
+
+2. Instala JSON Server.
+3. Corre el servidor JSON:
+
+    ```bash
+
+    json-server --watch db.json --port 3000
+
+Accede a la aplicación en tu navegador para interactuar con el catálogo de productos.
+Tecnologías Utilizadas
+
+    HTML5: Estructura de las páginas.
+    CSS3: Estilo visual.
+    JavaScript: Lógica de la aplicación.
+    JSON Server: Simulación de la base de datos.
 
