@@ -30,6 +30,13 @@ function mostrarCarrito() {
     totalDiv.innerHTML = `<h3>Total: $${formatearPrecio(total)}</h3>`;
     contenedor.appendChild(totalDiv);
 
+    // Botón para realizar el pedido en WhatsApp
+    const botonPedido = document.createElement('button');
+    botonPedido.classList.add('realizar-pedido');
+    botonPedido.innerText = "Realizar Pedido";
+    botonPedido.addEventListener('click', () => enviarPedidoWhatsApp(carrito));
+    contenedor.appendChild(botonPedido);
+
     // Añadir eventos de eliminar
     const botonesEliminar = document.querySelectorAll('.eliminar');
     botonesEliminar.forEach(boton => {
@@ -47,3 +54,20 @@ function eliminarProducto(event) {
 
 // Cargar el carrito al iniciar la página
 mostrarCarrito();
+
+function enviarPedidoWhatsApp(carrito) {
+    // Crear el mensaje de WhatsApp con el listado de productos
+    let mensaje = "Hola, deseo ordenar los siguientes productos:\n\n";
+    carrito.forEach(item => {
+        mensaje += `- ${item.nombre} (Precio: $${formatearPrecio(item.precio)})\n`;
+    });
+
+    const numeroTelefono = "573054668929"; // Reemplaza con tu número en formato internacional sin "+"
+    const urlWhatsApp = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`;
+
+    console.log(urlWhatsApp); // Verifica el enlace en la consola antes de abrirlo
+
+    // Redirige a WhatsApp con el mensaje
+    window.open(urlWhatsApp, '_blank');
+}
+
