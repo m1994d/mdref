@@ -22,6 +22,13 @@
 - **CSS**: Diseño responsivo y estilo futurista para la interfaz de usuario.
 - **JavaScript**: Lógica para manipular el carrito, la administración de productos, y el manejo de almacenamiento en `localStorage` o `db.json`.
 
+##Tecnologías Utilizadas
+
+    HTML5: Estructura de las páginas.
+    CSS3: Estilo visual.
+    JavaScript: Lógica de la aplicación.
+    JSON Server: Simulación de la base de datos.
+
 ### Configuración de `db.json` y JSON Server
 Para simular una base de datos, se implementó `JSON Server`, que utiliza `db.json` como archivo de almacenamiento.
 
