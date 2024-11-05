@@ -58,3 +58,6 @@ document.getElementById('filtro-categoria').addEventListener('change', (e) => {
   mostrarProductos(productosFiltrados);
 });
 
+fetch('http://localhost:3000/productos')
+  .then(response => response.json())
+  .then(data => mostrarProductos(data));
