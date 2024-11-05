@@ -42,4 +42,4 @@ Para simular una base de datos, se implementó `JSON Server`, que utiliza `db.js
 
     json-server --watch db.json --port 3000
 
-
+> Esto permite realizar operaciones CRUD sobre http://localhost:3000/productos.
