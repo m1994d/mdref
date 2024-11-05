@@ -20,7 +20,7 @@
    - **Búsqueda y Filtrado**: Los productos pueden ser filtrados por categoría o buscados por nombre.
    - **Persistencia de Datos**: Utiliza `db.json` para almacenar los productos creados, permitiendo que se mantengan al recargar la página.
    - 
-</details>Características
+</details>
 
 
 
