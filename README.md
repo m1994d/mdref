@@ -28,3 +28,11 @@ Para simular una base de datos, se implementó `JSON Server`, que utiliza `db.js
 1. **Instalación de JSON Server**:
    ```bash
    npm install -g json-server
+
+2. **Inicio del servidor:**:
+
+```bash
+
+    json-server --watch db.json --port 3000
+
+Esto permite realizar operaciones CRUD sobre http://localhost:3000/productos.
