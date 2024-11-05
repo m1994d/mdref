@@ -40,8 +40,8 @@ Para simular una base de datos, se implementó `JSON Server`, que utiliza `db.js
 
 <details>
 
-<summary>Tips for collapsed sections</summary>
-## Uso
+<summary>Uso</summary>
+
 
 1.Clona este repositorio:
 
@@ -54,8 +54,6 @@ Para simular una base de datos, se implementó `JSON Server`, que utiliza `db.js
 
     json-server --watch db.json --port 3000
 
-</details>
-
 Accede a la aplicación en tu navegador para interactuar con el catálogo de productos.
 Tecnologías Utilizadas
 
@@ -63,6 +61,9 @@ Tecnologías Utilizadas
     CSS3: Estilo visual.
     JavaScript: Lógica de la aplicación.
     JSON Server: Simulación de la base de datos.
+</details>
+
+
 
 
 Desarrollador por <sup>MadTech</sup>
