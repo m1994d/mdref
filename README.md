@@ -59,3 +59,6 @@ Tecnologías Utilizadas
     JavaScript: Lógica de la aplicación.
     JSON Server: Simulación de la base de datos.
 
+
+Desarrollador por <sup>MadTech</sup>
+
