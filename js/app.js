@@ -10,9 +10,11 @@ function mostrarProductos(filtrados) {
         item.innerHTML = `
     <img src="${producto.imagen}" alt="${producto.nombre}">
     <div class="contenido">
+    <div class="linea-divisoria"></div>
         <h3>${producto.nombre}</h3>
         <p>Precio: $${formatearPrecio(producto.precio)}</p>
     </div>
+    <p>${producto.detalles}</p>
     <div class="linea-divisoria"></div>
     <button class="agregar-carrito" data-nombre="${producto.nombre}" data-precio="${producto.precio}" data-imagen="${producto.imagen}">Agregar al carrito</button>
 `;

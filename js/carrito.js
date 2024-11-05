@@ -16,7 +16,7 @@ function mostrarCarrito() {
     <img src="${item.imagen}" alt="${item.nombre}">
     <h3>${item.nombre}</h3>
     <p>Precio: $${formatearPrecio(item.precio)}</p>
-    <p>${item.detalles}</p>
+    
     <button class="eliminar" data-index="${index}"><i class="fas fa-trash"></i> Eliminar</button>
 `;
 
