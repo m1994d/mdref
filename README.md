@@ -5,18 +5,28 @@
 ![CSS](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=for-the-badge)
 ![HTML](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=for-the-badge)
 
-## Descripción
+<details>
+   <summary>Descripción</summary>
 
 **Tienda Geek** es una aplicación web que permite a los usuarios navegar, buscar y agregar productos a un carrito de compras. Los administradores pueden agregar, modificar y eliminar productos, y los clientes pueden ver detalles y realizar búsquedas por categoría.
 
-## Características
+</details>
 
-- **Carrito de Compras**: Los clientes pueden agregar productos al carrito y ver el total.
-- **Administración de Productos**: Se pueden agregar, editar y eliminar productos desde el panel de administración.
-- **Búsqueda y Filtrado**: Los productos pueden ser filtrados por categoría o buscados por nombre.
-- **Persistencia de Datos**: Utiliza `db.json` para almacenar los productos creados, permitiendo que se mantengan al recargar la página.
+<details>
+   <summary>Características</summary>
+   
+   - **Carrito de Compras**: Los clientes pueden agregar productos al carrito y ver el total.
+   - **Administración de Productos**: Se pueden agregar, editar y eliminar productos desde el panel de administración.
+   - **Búsqueda y Filtrado**: Los productos pueden ser filtrados por categoría o buscados por nombre.
+   - **Persistencia de Datos**: Utiliza `db.json` para almacenar los productos creados, permitiendo que se mantengan al recargar la página.
+   - 
+</details>Características
 
-## Implementación
+
+
+<details>
+
+<summary>Implementación</summary> 
 
 ### Estructura del Proyecto
 - **HTML**: Estructura base de las páginas (`index.html`, `admin.html`, `carrito.html`, `modificar.html`, `login.html`).
@@ -37,7 +47,7 @@ Para simular una base de datos, se implementó `JSON Server`, que utiliza `db.js
     json-server --watch db.json --port 3000
 
 > Esto permite realizar operaciones CRUD sobre http://localhost:3000/productos.
-
+</details>
 <details>
 
 <summary>Uso</summary>
