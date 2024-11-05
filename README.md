@@ -22,7 +22,7 @@
 - **CSS**: Diseño responsivo y estilo futurista para la interfaz de usuario.
 - **JavaScript**: Lógica para manipular el carrito, la administración de productos, y el manejo de almacenamiento en `localStorage` o `db.json`.
 
-##Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
     HTML5: Estructura de las páginas.
     CSS3: Estilo visual.
@@ -36,10 +36,19 @@ Para simular una base de datos, se implementó `JSON Server`, que utiliza `db.js
    ```bash
    npm install -g json-server
 
-2. **Inicio del servidor:**:
+2. **Inicio del servidor**:
 
-```bash
+    ```bash
 
     json-server --watch db.json --port 3000
 
 > Esto permite realizar operaciones CRUD sobre http://localhost:3000/productos.
+
+## Uso
+
+Clona este repositorio:
+
+     ```bash
+     
+    git clone <URL_DEL_REPOSITORIO>
+
