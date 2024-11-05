@@ -38,25 +38,11 @@ function agregarAlCarrito(event) {
     alert('Producto agregado al carrito!');
 }
 
-document.getElementById('busqueda').addEventListener('input', (e) => {
-    const filtro = e.target.value.toLowerCase();
-    const productosFiltrados = productos.filter(prod => prod.nombre.toLowerCase().includes(filtro));
-    mostrarProductos(productosFiltrados);
-});
-
 mostrarProductos(productos);
 
 function formatearPrecio(precio) {
     return precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'").replace(".", ",");
 }
-
-document.getElementById('filtro-categoria').addEventListener('change', (e) => {
-  const categoriaSeleccionada = e.target.value;
-  const productosFiltrados = categoriaSeleccionada === "Todos" 
-      ? productos 
-      : productos.filter(prod => prod.categoria === categoriaSeleccionada);
-  mostrarProductos(productosFiltrados);
-});
 
 fetch('http://localhost:3000/productos')
   .then(response => response.json())

@@ -2,35 +2,99 @@
   "productos": [
     {
       "id": 1,
-      "nombre": "Mando Xbox Series",
-      "precio": 299000,
-      "imagen": "https://www.ktronix.com/medias/889842611557-001-750Wx750H?context=bWFzdGVyfGltYWdlc3wxMzMwNHxpbWFnZS93ZWJwfGFEUTBMMmd6TUM4eE5ESTVOVE01TmpRNE16RXdNaTg0T0RrNE5ESTJNVEUxTlRkZk1EQXhYemMxTUZkNE56VXdTQXw2ZDk1NTQ1MmZmY2U0ZDg2ZGVhZDA1ODQ3YTM1OGVjNDIxM2VjYmYxYjZlNDk0ODYzNzAzZWU2ZjdlNGRjNmMx",
+      "nombre": "Figura Batman!",
+      "precio": 219000,
+      "imagen": "https://toogeek.co/wp-content/uploads/2024/10/889698806893-500x500.jpg",
       "categoria": "Electrónica",
-      "detalles": "Diseño modernizado del control inalámbrico de Xbox, con superficies esculpidas y una geometría refinada para una mayor comodidad durante el juego."
+      "detalles": "Batimovil Funko Pop! DC Comics 522."
     },
     {
       "id": 2,
-      "nombre": "Mando Ds PS5",
-      "precio": 282900,
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_653979-MLU75209281062_032024-O.webp",
+      "nombre": "Figura Polka Dot Man",
+      "precio": 84900,
+      "imagen": "https://toogeek.co/wp-content/uploads/2021/07/889698560177.jpg",
       "categoria": "Electrónica",
-      "detalles": "Control preciso Este mando combina funciones revolucionarias mientras conserva precisión, comodidad y exactitud en cada movimiento."
+      "detalles": "Funko POP DC Comics The Suicide Squad."
     },
     {
       "id": 3,
-      "nombre": "Timon Logitech G29",
-      "precio": 1599000,
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_729968-MCO76676914739_052024-O.webp",
+      "nombre": "Figura Harley Quinn",
+      "precio": 84900,
+      "imagen": "https://toogeek.co/wp-content/uploads/2021/07/889698560160.jpg",
       "categoria": "Electrónica",
-      "detalles": "Todos los controles son fácilmente accesibles. El mando de dirección, los botones y las palancas de cambio están incorporados en el volante."
+      "detalles": "Funko POP DC Comics The Suicide Squad Damaged Dress."
     },
     {
-      "id": 3,
-      "nombre": "Funko",
-      "precio": 0,
-      "imagen": "",
+      "id": 4,
+      "nombre": "Figura Den Den Mushi",
+      "precio": 89900,
+      "imagen": "https://toogeek.co/wp-content/uploads/2024/10/col3593.jpg",
       "categoria": "Juguetes",
-      "detalles": "Proximamente."
+      "detalles": "Luffy PT One Piece Animee."
+    },
+    {
+      "id": 5,
+      "nombre": "Figura Luffy",
+      "precio": 26900,
+      "imagen": "https://toogeek.co/wp-content/uploads/2020/06/fig0180.jpeg",
+      "categoria": "Juguetes",
+      "detalles": "PT One Piece Anime Enojado Base Transparente en Bolsa 4"
+    },
+    {
+      "id":6,
+      "nombre":"Lewis Hamilton 44",
+      "precio": 0,
+      "imagen":"https://mosaicosdiy.com/115-large_default/producto-agotado-temporalmente.jpg",
+      "categoria":"Juguetes",
+      "detalles":"N/A"
+    },
+    {
+      "id":7,
+      "nombre":"Figura One piece",
+      "precio": 94900,
+      "imagen":"https://toysmart.co/cdn/shop/files/113788_1800x1800.jpg?v=1716587855",
+      "categoria":"Juguetes",
+      "detalles":"Funko trae para ti una figura inspirada en los personajes del Anime- Manga One Piece."
+    },
+    {
+      "id":8,
+      "nombre":"Figura Deadpool",
+      "precio": 94900,
+      "imagen":"https://toysmart.co/cdn/shop/files/112748_1800x1800.jpg?v=1716481993",
+      "categoria":"Juguetes",
+      "detalles":"Artista deadpool gamestop funko exclusivo Deadpool vestido como el verdadero artista es funko pop edición limitada."
+    },
+    {
+      "id":9,
+      "nombre":"Figura Tyrion Lannister",
+      "precio": 160000,
+      "imagen":"https://static.wixstatic.com/media/40d035_5970a3d948174c6ca9fec5c8d08dfbba~mv2.jpg/v1/fill/w_580,h_310,al_c,lg_1,q_80,enc_auto/40d035_5970a3d948174c6ca9fec5c8d08dfbba~mv2.jpg",
+      "categoria":"Juguetes",
+      "detalles":"Funko trae para ti, Tyrion Lannister con trono"
+    },
+    {
+      "id":10,
+      "nombre":"Barking Kittens",
+      "precio": 125000,
+      "imagen":"https://pepeganga.vtexassets.com/arquivos/ids/1011661-800-auto?v=638301308025970000&width=800&height=auto&aspect=true",
+      "categoria":"Juguetes",
+      "detalles":"Exploding Kittens es el galardonado juego de cartas familiar que ha vendido cerca de diez millones de copias en todo el mundo."
+    },
+    {
+      "id":11,
+      "nombre":"Dungeon Raiders",
+      "precio": 99900,
+      "imagen":"https://static.wixstatic.com/media/40d035_945f2601e0a84156aafe1765972512bb~mv2.jpeg/v1/fill/w_420,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/40d035_945f2601e0a84156aafe1765972512bb~mv2.jpeg",
+      "categoria":"Juguetes",
+      "detalles":"Únete al grupo de valientes aventureros! ¡Explora una mazmorra llena de monstruos, trampas y tesoros"
+    },
+    {
+      "id":12,
+      "nombre":"Exploding Kittens",
+      "precio": 150000,
+      "imagen":"https://www.theluckycharm.com.au/images/thumbs/0002432_exploding-kittens-7-years-family_500.png",
+      "categoria":"Juguetes",
+      "detalles":"Únicamente Tienda Digital, Como se juega? https://www.youtube.com/watch?v=L3BqV5MnMhs"
     }
   ]
 }
