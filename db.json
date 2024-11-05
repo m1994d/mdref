@@ -2,19 +2,35 @@
   "productos": [
     {
       "id": 1,
-      "nombre": "Producto 1",
-      "precio": 1000,
-      "imagen": "https://example.com/imagen1.jpg",
+      "nombre": "Mando Xbox Series",
+      "precio": 299000,
+      "imagen": "https://www.ktronix.com/medias/889842611557-001-750Wx750H?context=bWFzdGVyfGltYWdlc3wxMzMwNHxpbWFnZS93ZWJwfGFEUTBMMmd6TUM4eE5ESTVOVE01TmpRNE16RXdNaTg0T0RrNE5ESTJNVEUxTlRkZk1EQXhYemMxTUZkNE56VXdTQXw2ZDk1NTQ1MmZmY2U0ZDg2ZGVhZDA1ODQ3YTM1OGVjNDIxM2VjYmYxYjZlNDk0ODYzNzAzZWU2ZjdlNGRjNmMx",
       "categoria": "Electrónica",
-      "detalles": "Descripción breve del producto 1."
+      "detalles": "Diseño modernizado del control inalámbrico de Xbox, con superficies esculpidas y una geometría refinada para una mayor comodidad durante el juego."
     },
     {
       "id": 2,
-      "nombre": "Producto 2",
-      "precio": 2000,
-      "imagen": "https://example.com/imagen2.jpg",
+      "nombre": "Mando Ds PS5",
+      "precio": 282900,
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_653979-MLU75209281062_032024-O.webp",
+      "categoria": "Electrónica",
+      "detalles": "Control preciso Este mando combina funciones revolucionarias mientras conserva precisión, comodidad y exactitud en cada movimiento."
+    },
+    {
+      "id": 3,
+      "nombre": "Timon Logitech G29",
+      "precio": 1599000,
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_729968-MCO76676914739_052024-O.webp",
+      "categoria": "Electrónica",
+      "detalles": "Todos los controles son fácilmente accesibles. El mando de dirección, los botones y las palancas de cambio están incorporados en el volante."
+    },
+    {
+      "id": 3,
+      "nombre": "Funko",
+      "precio": 0,
+      "imagen": "",
       "categoria": "Juguetes",
-      "detalles": "Descripción breve del producto 2."
+      "detalles": "Proximamente."
     }
   ]
 }
