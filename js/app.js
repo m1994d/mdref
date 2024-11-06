@@ -1,5 +1,8 @@
-const productos = JSON.parse(localStorage.getItem('productos')) || [];
-mostrarProductos(productos);
+// Modificar la forma en que obtenemos los productos. Ahora los obtenemos desde el servidor.
+fetch('http://localhost:3000/productos')
+  .then(response => response.json())
+  .then(data => mostrarProductos(data))
+  .catch(err => console.error('Error al obtener los productos:', err));
 
 function mostrarProductos(filtrados) {
     const contenedor = document.getElementById('productos');
@@ -8,19 +11,16 @@ function mostrarProductos(filtrados) {
         const item = document.createElement('div');
         item.classList.add('producto');
         item.innerHTML = `
-    <img src="${producto.imagen}" alt="${producto.nombre}">
-    <div class="contenido">
-    <div class="linea-divisoria"></div>
-        <h3>${producto.nombre}</h3>
-        <p>Precio: $${formatearPrecio(producto.precio)}</p>
-    </div>
-    <p>${producto.detalles}</p>
-    <div class="linea-divisoria"></div>
-    <button class="agregar-carrito" data-nombre="${producto.nombre}" data-precio="${producto.precio}" data-imagen="${producto.imagen}">Agregar al carrito</button>
-`;
-
-
-
+            <img src="${producto.imagen}" alt="${producto.nombre}">
+            <div class="contenido">
+                <div class="linea-divisoria"></div>
+                <h3>${producto.nombre}</h3>
+                <p>Precio: $${formatearPrecio(producto.precio)}</p>
+            </div>
+            <p>${producto.detalles}</p>
+            <div class="linea-divisoria"></div>
+            <button class="agregar-carrito" data-nombre="${producto.nombre}" data-precio="${producto.precio}" data-imagen="${producto.imagen}">Agregar al carrito</button>
+        `;
         contenedor.appendChild(item);
     });
 
@@ -30,6 +30,7 @@ function mostrarProductos(filtrados) {
         boton.addEventListener('click', agregarAlCarrito);
     });
 }
+
 
 function agregarAlCarrito(event) {
     const nombre = event.target.getAttribute('data-nombre');
