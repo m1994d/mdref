@@ -4,9 +4,10 @@ fetch('http://localhost:3000/productos')
   .then(data => mostrarProductos(data))
   .catch(err => console.error('Error al obtener los productos:', err));
 
+// Función para mostrar los productos
 function mostrarProductos(productos) {
     const contenedor = document.getElementById('productos');
-    contenedor.innerHTML = ''; // Limpiar el contenedor
+    contenedor.innerHTML = ''; // Limpiar el contenedor antes de agregar productos
 
     productos.forEach(producto => {
         const item = document.createElement('div');
@@ -27,6 +28,18 @@ function mostrarProductos(productos) {
     });
 }
 
+// Función para formatear el precio (con separadores de miles)
+function formatearPrecio(precio) {
+    return precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'").replace(".", ",");
+}
+
+// Fetch de los productos desde el servidor
+fetch('http://localhost:3000/productos')
+  .then(response => response.json())
+  .then(data => mostrarProductos(data))
+  .catch(err => console.error('Error al obtener los productos:', err));
+
+
 function agregarAlCarrito(event) {
     const nombre = event.target.getAttribute('data-nombre');
     const precio = parseFloat(event.target.getAttribute('data-precio'));
@@ -37,8 +50,4 @@ function agregarAlCarrito(event) {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 
     alert('Producto agregado al carrito!');
-}
-
-function formatearPrecio(precio) {
-    return precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'").replace(".", ",");
 }

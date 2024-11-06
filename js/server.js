@@ -5,6 +5,8 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+app.use(express.static('public'));
+
 // Middleware para parsear el body de las peticiones POST
 app.use(express.json());
 
@@ -15,7 +17,7 @@ app.get('/productos', (req, res) => {
         if (err) {
             return res.status(500).send('Error al leer los productos');
         }
-        res.json(JSON.parse(data));
+        res.json(JSON.parse(data)); // Devuelve los productos
     });
 });
 
