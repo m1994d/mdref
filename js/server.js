@@ -5,6 +5,10 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+const cors = require('cors');
+app.use(cors()); // Permite solicitudes desde cualquier origen
+
+
 app.use(express.static('public'));
 
 // Middleware para parsear el body de las peticiones POST
