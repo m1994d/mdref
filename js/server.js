@@ -5,6 +5,9 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+// Middleware para parsear el body de las peticiones POST
+app.use(express.json());
+
 // Ruta para obtener productos desde el archivo db.json
 app.get('/productos', (req, res) => {
     const productosPath = path.join(__dirname, 'db.json');
@@ -17,7 +20,7 @@ app.get('/productos', (req, res) => {
 });
 
 // Ruta para agregar un producto al archivo db.json
-app.post('/productos', express.json(), (req, res) => {
+app.post('/productos', (req, res) => {
     const newProduct = req.body;
     const productosPath = path.join(__dirname, 'db.json');
     fs.readFile(productosPath, 'utf-8', (err, data) => {
@@ -34,6 +37,9 @@ app.post('/productos', express.json(), (req, res) => {
         });
     });
 });
+
+// Servir archivos estáticos (por ejemplo, el frontend)
+app.use(express.static('public'));
 
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);

@@ -1,40 +1,35 @@
-// Modificar la forma en que obtenemos los productos. Ahora los obtenemos desde el servidor.
+// Mostrar productos desde el servidor
 fetch('http://localhost:3000/productos')
   .then(response => response.json())
   .then(data => mostrarProductos(data))
   .catch(err => console.error('Error al obtener los productos:', err));
 
-function mostrarProductos(filtrados) {
+function mostrarProductos(productos) {
     const contenedor = document.getElementById('productos');
-    contenedor.innerHTML = ''; // Limpia el contenedor antes de agregar productos
-    filtrados.forEach(producto => {
+    contenedor.innerHTML = ''; // Limpiar el contenedor
+
+    productos.forEach(producto => {
         const item = document.createElement('div');
         item.classList.add('producto');
         item.innerHTML = `
             <img src="${producto.imagen}" alt="${producto.nombre}">
-            <div class="contenido">
-                <div class="linea-divisoria"></div>
-                <h3>${producto.nombre}</h3>
-                <p>Precio: $${formatearPrecio(producto.precio)}</p>
-            </div>
+            <h3>${producto.nombre}</h3>
+            <p>Precio: $${formatearPrecio(producto.precio)}</p>
             <p>${producto.detalles}</p>
-            <div class="linea-divisoria"></div>
             <button class="agregar-carrito" data-nombre="${producto.nombre}" data-precio="${producto.precio}" data-imagen="${producto.imagen}">Agregar al carrito</button>
         `;
         contenedor.appendChild(item);
     });
 
-    // Agregar evento al botón
-    const botonesAgregar = document.querySelectorAll('.agregar-carrito');
-    botonesAgregar.forEach(boton => {
+    // Agregar eventos a los botones de agregar al carrito
+    document.querySelectorAll('.agregar-carrito').forEach(boton => {
         boton.addEventListener('click', agregarAlCarrito);
     });
 }
 
-
 function agregarAlCarrito(event) {
     const nombre = event.target.getAttribute('data-nombre');
-    const precio = parseFloat(event.target.getAttribute('data-precio')); // Asegurarse de que sea número
+    const precio = parseFloat(event.target.getAttribute('data-precio'));
     const imagen = event.target.getAttribute('data-imagen');
 
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -44,12 +39,6 @@ function agregarAlCarrito(event) {
     alert('Producto agregado al carrito!');
 }
 
-mostrarProductos(productos);
-
 function formatearPrecio(precio) {
     return precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'").replace(".", ",");
 }
-
-fetch('http://localhost:3000/productos')
-  .then(response => response.json())
-  .then(data => mostrarProductos(data));
